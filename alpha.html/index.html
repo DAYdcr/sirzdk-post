@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ошибка</title>
+        <meta charset="utf-8">
+        <style>
+            /* Для экранов шириной до 600px */
+            @media (max-width: 600px) {
+                body {
+                background-color: lightblue;
+                }
+            }
+            body {
+                background: linear-gradient(to right, #434343, #ffffff);
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+            .head {
+                background: linear-gradient(to right, #434343, #ffffff);
+                color: white;
+                padding: 10px;
+            }
+            .body {
+                margin-top: 20px;
+                text-align: center;
+            }
+            h2, h3, h4 {
+                font-size: 1.5em;
+            }
+            button {
+                padding: 10px 20px;
+                margin: 10px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s;
+                display: inline-block;
+            }
+            button a {
+                text-decoration: none;
+                color: white;
+            }
+            button:hover {
+                background-color: #ffffff;
+                color: black;
+            }
+            .main {
+                background: rgba(102, 102, 102, 0.5);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                animation: fadeIn 0.5s ease-in-out; /* Add animation property */
+            }
+            #okno {
+                width: 400px;
+                height: 200px;
+                text-align: center;
+                padding: 20px;
+                border-radius: 20px;
+                color: #000000;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(to top, rgb(115, 115, 115), rgb(189, 189, 189));
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+            #main:target {display: block;}
+            .close {
+                display: inline-block;
+                color: #000000;
+                padding: 0 12px;
+                margin: 10px;
+                text-decoration: none;
+                font-size: 14pt;
+                cursor:pointer;
+                background: white;
+                border-radius: 10px;
+            }
+            .close:hover {background: #000000; color: white; border-radius: 5px;}
+            .theCode {
+                color: #3c3c3c;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            input[type="password"] {
+                padding: 10px;
+                margin: 10px;
+                width: 200px;
+                border: 2px solid #007bff;
+                border-radius: 5px;
+                font-size: 1em;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin: 10px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s;
+                display: inline-block;
+                font-size: 1em;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+            h1 {
+                color: rgb(255, 255, 255);
+            }
+            h1::selection{
+                color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <h1 align="center">404</h1>
+        </div>
+        <div class="body">
+            <h2>Альфа версия недоступна.</h2>
+            <h3>Дождитесь, когда сайт будет полностью готов</h3>
+        </div>
+    </body>
+</html>

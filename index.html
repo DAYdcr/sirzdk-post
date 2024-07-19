@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Переход</title>
+    <style>
+        @media (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+        body {
+            background: linear-gradient(to right, #434343, #ffffff);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .head {
+            background: linear-gradient(to right, #434343, #ffffff);
+            color: white;
+            padding: 10px;
+        }
+        .body {
+            margin-top: 20px;
+            text-align: center;
+        }
+        h2, h3, h4 {
+            font-size: 1.5em;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        button a {
+            text-decoration: none;
+            color: white;
+        }
+        button:hover {
+            background-color: #00046f;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1 align="center">Привет!</h1>
+    </div>
+    <div class="body">
+        <h2>У этого сайта имеются 2 версии</h2>
+        <h3>Альфа и бета</h3>
+        <h4>Куда переходим?</h4>
+        <button><a href="beta.html/index.html">Бета версия</a></button>
+        <button><a href="alpha.html/index.html">Альфа версия</a></button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Начальная страница. (BETA)</title>
+    <style>
+        .general {
+            margin: 0;
+        }
+/* Для экранов шириной до 600px */
+        @media (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .head {
+            background: linear-gradient(to top, black, rgb(42, 42, 42));
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        h1::selection {
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+        a {
+            color: black;
+        }
+        a:hover {
+            color: grey;
+        }
+        .menu {
+            display: flex;
+            justify-content: center; /* Center the items horizontally */
+            padding: 0px; /* Add padding around the menu items */
+        }
+        .menu > div {
+            padding-left: 20px;
+        }
+        .posts > div {
+            background-color: rgb(225, 225, 225);
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .posts {
+            margin-left: 100px;
+            margin-right: 100px;
+            box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+        }
+        .posts > div:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    </head>
+    <body>
+        <div class="head">
+            <h1 align="center">Добро пожаловать! Это сайт специально для постов sirzdk</h1>
+        </div>
+        <div class="general" align="center">
+            <div class="menu">
+                <div>
+                    <p><strong><a href="home.html">Посты</a></strong></p>
+                </div>
+                <div>
+                    <p><a href="info.html">Информация</a></p>
+                </div>
+                
+                <div>
+                    <p><a href="social-media.html">Соцсети</a></p>
+                </div>
+                
+                <div>
+                    <p><i><a href="contact.html">Связь со мной</a></i></p>     
+                </div>
+
+            </div>
+            <div class="posts" align="center">
+                <div class="ex">
+                    <h2>Информация будет доступна в Альфа версии</h2>
+                    <h6>Мне просто лень писать сейчас</h6>
+                </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </body>
+</html>

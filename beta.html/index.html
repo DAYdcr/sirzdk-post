@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Проверка</title>
+        <meta charset="utf-8">
+        <style>
+            @media (max-width: 600px) {
+                body {
+                    background-color: lightblue;
+                }
+            }
+            body {
+                background: linear-gradient(to right, #434343, #ffffff);
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+            .head {
+                background: linear-gradient(to right, #434343, #ffffff);
+                color: white;
+                padding: 10px;
+            }
+            .body {
+                margin-top: 20px;
+                text-align: center;
+            }
+            h2, h3, h4 {
+                font-size: 1.5em;
+            }
+            button {
+                padding: 10px 20px;
+                margin: 10px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s;
+                display: inline-block;
+            }
+            button a {
+                text-decoration: none;
+                color: white;
+            }
+            button:hover {
+                background-color: #ffffff;
+                color: black;
+            }
+            .main {
+                background: rgba(102, 102, 102, 0.5);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                animation: fadeIn 0.5s ease-in-out; /* Add animation property */
+            }
+            #okno {
+                width: 400px;
+                height: 200px;
+                text-align: center;
+                padding: 20px;
+                border-radius: 20px;
+                color: #000000;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(to top, rgb(115, 115, 115), rgb(189, 189, 189));
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+            #main:target {display: block;}
+            .close {
+                display: inline-block;
+                color: #000000;
+                padding: 0 12px;
+                margin: 10px;
+                text-decoration: none;
+                font-size: 14pt;
+                cursor:pointer;
+                background: white;
+                border-radius: 10px;
+            }
+            .close:hover {background: #000000; color: white; border-radius: 5px;}
+            .theCode {
+                color: #3c3c3c;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            input[type="password"] {
+                padding: 10px;
+                margin: 10px;
+                width: 200px;
+                border: 2px solid #007bff;
+                border-radius: 5px;
+                font-size: 1em;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin: 10px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s;
+                display: inline-block;
+                font-size: 1em;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <h1 align="center">Я тебе не верю</h1>
+        </div>
+        <div class="body">
+            <h2>Бета версия сайта</h2>
+            <h3>Введите ключ для сайта</h3>
+            <input id="password" placeholder="Введите ключ доверия" type="password"/>
+            <button id="enter">Войти на сайт</button>
+        </div>
+        <div id="main">
+            <div class="main">
+                <div id="okno">
+                    <h1>Код недоступен.</h1>
+                    <p>
+                        <i>
+                            Я не могу предоставить Вам доступ к бета версии, так как введённый Вами код недоступен. 
+                        </i>
+                    </p>
+                    <p>Если Вы считаете это ошибкой, то уведомите меня.</p>
+                    <a class="close" href="#">Закрыть окно</a>
+                </div>
+        </div>
+        <div>
+            <h4 align="center">Код, созданный в честь открытия сайта</h4>
+            <p class="theCode" align="center">open!</p>
+        </div>
+    </body>
+    <script>
+        let password = document.getElementById('password');
+        let button = document.getElementById('enter');
+        let popup = document.querySelector('.main');
+        let time = document.querySelector('.main');
+        let closeBtn = document.querySelector('.close');
+
+        function enter() {
+            if (password.value === 'sirzdk_NewSite-beta-open-friend-123404') {
+                window.open('home.html');
+            } 
+            if (password.value === 'open!') {
+                window.open('home.html');
+            } else {
+                showPopup();
+            }
+        }
+
+        function showPopup() {
+            popup.style.display = 'block';
+        }
+
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+
+        button.onclick = enter;
+        closeBtn.onclick = closePopup;
+    </script>
+</html>
